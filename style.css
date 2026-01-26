@@ -1,0 +1,169 @@
+/* --- RESET & DASAR --- */
+* {
+    margin: 0; /* Menghilangkan margin bawaan */
+    padding: 0; /* Menghilangkan padding bawaan */
+    box-sizing: border-box; /* Ukuran elemen dihitung termasuk padding & border */
+    font-family: 'Poppins', sans-serif; /* Font modern (pastikan sudah terhubung atau pakai default) */
+}
+
+body {
+    scroll-behavior: smooth; /* Membuat efek scroll halus saat klik menu navigasi */
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* --- NAVIGASI --- */
+nav {
+    background-color: #0a192f; /* Biru Gelap Navy */
+    padding: 20px 0;
+    position: fixed; /* Navigasi menempel di atas saat di-scroll */
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+nav ul {
+    display: flex; /* Menyejajarkan menu ke samping */
+    justify-content: center; /* Menu berada di tengah navigasi */
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px; /* Jarak antar teks menu */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Menghapus garis bawah */
+    font-weight: 500;
+    transition: 0.3s; /* Animasi halus saat hover */
+}
+
+nav ul li a:hover {
+    color: #007bff; /* Berubah warna saat disentuh kursor */
+}
+
+/* --- HERO SECTION (Bagian Home) --- */
+.hero {
+    height: 100vh; /* Tinggi penuh satu layar */
+    background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), 
+                url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* Background gambar gelap */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 4rem; /* Nama Bramantio dibuat besar */
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- CONTAINER UMUM --- */
+.container {
+    padding: 100px 10%; /* Memberi ruang di sisi kiri, kanan, atas, dan bawah */
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #0a192f;
+}
+
+/* --- ABOUT SECTION --- */
+.About {
+    text-align: center;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* --- PROJECT SECTION (GRID) --- */
+.bg-light {
+    background-color: #f4f7f6; /* Warna latar belakang kontras sedikit abu-abu */
+}
+
+.Project-grid {
+    display: grid; /* Mengaktifkan sistem Grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif: minimal 300px per kartu */
+    gap: 25px; /* Jarak antar kartu proyek */
+}
+
+.proyek-card {
+    background: white;
+    text-decoration: none; /* Menghilangkan garis bawah karena kartu adalah link <a> */
+    color: inherit;
+    border-radius: 12px;
+    overflow: hidden; /* Memastikan gambar tidak keluar dari sudut melengkung */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.proyek-card:hover {
+    transform: translateY(-10px); /* Efek kartu terangkat saat dihover */
+}
+
+.proyek-card img {
+    width: 100%; /* Gambar menyesuaikan lebar kartu */
+    height: 200px;
+    object-fit: cover; /* Gambar tidak penyet/distorsi */
+}
+
+.Project-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.Project-info h3 {
+    color: #0a192f;
+    margin-bottom: 10px;
+}
+
+/* --- MEDSOS (CONTACT) --- */
+.medsos-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Jika layar kecil, icon pindah ke bawah */
+    gap: 30px;
+}
+
+.medsos-item {
+    display: flex;
+    flex-direction: column; /* Icon dan teks disusun ke bawah */
+    align-items: center;
+    text-decoration: none;
+    color: #0a192f;
+    transition: 0.3s;
+}
+
+.medsos-item img {
+    width: 50px; /* Ukuran icon medsos */
+    margin-bottom: 10px;
+}
+
+.medsos-item:hover {
+    transform: scale(1.1); /* Efek membesar sedikit saat dihover */
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #0a192f;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
